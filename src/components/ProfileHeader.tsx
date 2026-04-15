@@ -1,5 +1,5 @@
-import { MapPin, ExternalLink } from "lucide-react";
 import { SITE_CONFIG } from "@/data/links";
+import { ExternalLink, MapPin } from "lucide-react";
 
 export function ProfileHeader() {
   return (
@@ -16,24 +16,16 @@ export function ProfileHeader() {
     >
       {/* Avatar */}
       <div className="avatar-ring">
-        <div
+        <img
+          src="https://github.com/gourangadassamrat.png?size=64"
+          alt={SITE_CONFIG.username}
           style={{
             width: "88px",
             height: "88px",
             borderRadius: "9999px",
-            background: "linear-gradient(135deg, var(--blush), var(--plum))",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            fontSize: "2rem",
-            fontWeight: 800,
-            color: "#fff",
-            fontFamily: "var(--font-mono)",
-            letterSpacing: "-0.05em",
+            objectFit: "cover",
           }}
-        >
-          {SITE_CONFIG.avatarInitials}
-        </div>
+        />
       </div>
 
       {/* Name & handle */}
